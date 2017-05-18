@@ -1,4 +1,4 @@
-package xiaogu.com.demo
+package com.demo
 
 import org.junit.Test
 
