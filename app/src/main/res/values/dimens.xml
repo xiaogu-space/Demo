@@ -4,4 +4,6 @@
     <dimen name="space_50">50dp</dimen>
     <dimen name="space_100">100dp</dimen>
     <dimen name="space_300">300dp</dimen>
+    <dimen name="space_350">350dp</dimen>
+    <dimen name="space_400">400dp</dimen>
 </resources>

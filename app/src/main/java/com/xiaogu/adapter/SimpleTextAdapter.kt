@@ -20,7 +20,11 @@ class SimpleTextAdapter(val items: List<Meizi>) : RecyclerView.Adapter<SimpleTex
     override fun onBindViewHolder(holder: SimpleTextAdapter.ViewHolder, position: Int) {
         with(holder?.itemView!!) {
             tv_title.text = items[position].who
-            Glide.with(context).load(items[position].url).into(img)
+            Glide
+                    .with(context)
+                    .load(items[position].url)
+                    .centerCrop()
+                    .into(img)
         }
     }
 
