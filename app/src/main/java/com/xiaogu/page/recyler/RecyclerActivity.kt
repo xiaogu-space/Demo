@@ -5,15 +5,28 @@ import android.os.Bundle
 import android.support.v7.widget.LinearLayoutManager
 import com.demo.R
 import com.xiaogu.adapter.SimpleTextAdapter
+import com.xiaogu.bean.Meizi
 import kotlinx.android.synthetic.main.activity_recycler.*
 
-class RecyclerActivity : AppCompatActivity() {
+class RecyclerActivity : AppCompatActivity(), RecyclerView {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_recycler)
 
-        var items = listOf<String>("1", "2", "3", "4")
+        initView()
+        initData()
+    }
+
+    fun initView() {
         recyclerView.layoutManager = LinearLayoutManager(this)
-       recyclerView.adapter = SimpleTextAdapter(items)
+    }
+
+    fun initData() {
+        var recyclerPress = RecyclerPress(this)
+        recyclerPress?.getData()
+    }
+
+    override fun setData(meizis: List<Meizi>) {
+        recyclerView.adapter = SimpleTextAdapter(meizis)
     }
 }
