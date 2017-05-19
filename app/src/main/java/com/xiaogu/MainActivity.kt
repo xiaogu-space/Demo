@@ -21,7 +21,7 @@ class MainActivity : AppCompatActivity() {
             toast("这个代码很给力")
         }
         button2.setOnClickListener {
-            gotoActivity<Main2Activity>()
+            gotoActivity<RecyclerActivity>()
         }
     }
 
