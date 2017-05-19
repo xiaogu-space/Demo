@@ -1,4 +1,4 @@
-package com.xiaogu
+package com.xiaogu.page.recyler
 
 import android.support.v7.app.AppCompatActivity
 import android.os.Bundle
@@ -14,6 +14,6 @@ class RecyclerActivity : AppCompatActivity() {
 
         var items = listOf<String>("1", "2", "3", "4")
         recyclerView.layoutManager = LinearLayoutManager(this)
-        recyclerView.adapter = SimpleTextAdapter(items)
+       recyclerView.adapter = SimpleTextAdapter(items)
     }
 }
